@@ -58,4 +58,17 @@ const res = skills1
 .filter((s:string) => s !== 'DevOps')
 .map(s => s+ '! !')
 .reduce((a, b) => a+ b);
-console.log(res)*/ 
+console.log(res)
+const skills: [number, string] = [1,'Dev',];
+const skillName = skills[1];
+const id = skills[0];
+
+skills.push('gggg');
+//Пушнуть можем, но обратиться нет
+ const sdf = skills[2]ошибка
+
+skills.pop();
+console.log(skills)
+const [id, skillName] = skills
+
+const arr: [number, string, ...boolean[]] = [1, 'sdf', true,true, false]*/ 
