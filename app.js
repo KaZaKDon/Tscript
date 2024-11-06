@@ -1,13 +1,9 @@
 "use strict";
-let revenue = 1000;
-let bonus = 500;
-let res = revenue + bonus;
-console.log(res);
-
-
-function getFullName(firstname, surmame) {
-    return `${firstname}  ${surmame}`;
-}
-const getFullName1 = (firstname, surmame) => {
-    return `${firstname}  ${surmame}`;
-};
+const skills = [1, 'Dev',];
+const id = skills[0];
+const skillName = skills[1];
+//skills.push('gggg');
+//Пушнуть можем, но обратиться нет
+// const sdf = skills[2]ошибка
+skills.pop();
+console.log(skills);

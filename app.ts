@@ -1,13 +1,20 @@
-let revenue = 1000
-let bonus = 500
-
-let res = revenue + bonus
-console.log(res)
-
-
-function getFullName(firstname: string, surmame: string): string {
-    return `${firstname}  ${surmame}`
+enum StatusCode{
+    SUCCESS = 1,
+    IN_PROCESS,
+    FAILED
 }
-const getFullName1 = (firstname: string, surmame: string): string => {
-    return `${firstname}  ${surmame}`
+
+const play = {
+    message: 'Платёж успешен',
+    statusCode: StatusCode.SUCCESS
+};
+
+// SUCCESS = 1
+// IN_PROCESS =2
+// FAILED = 3
+
+function action(status: StatusCode) {
+
 }
+
+action(StatusCode.SUCCESS)
