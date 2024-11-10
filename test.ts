@@ -70,4 +70,64 @@ skills.pop();
 console.log(skills)
 const [id, skillName] = skills
 
-const arr: [number, string, ...boolean[]] = [1, 'sdf', true,true, false]*/
+const arr: [number, string, ...boolean[]] = [1, 'sdf', true,true, false]
+
+
+
+interface IPayment {
+    sum: number;
+    from: number;
+    to: number
+}
+interface IPaymentRequest extends IPayment {}
+
+
+
+interface IDataSuccess extends IPayment {
+    databaseId: number;
+}
+
+interface IDataFailed{
+    errorMessage: string;
+    errorCode: number;
+}
+
+enum PaymentStatus {
+    Success = 'success',
+    Failed = 'failed',
+}
+
+interface IResponceSuccess {
+    status: PaymentStatus.Success;
+    data: IDataSuccess;
+}
+
+interface IResponceFailed {
+    status: PaymentStatus.Failed;
+    data: IDataFailed;
+}
+
+
+// Запрос в виде платежа
+const iPayment: IPayment = {
+	"sum": 10000,
+	"from": 2,
+	"to": 4
+}
+// Ответ
+const iResponceS: IResponceSuccess = {
+	"status": PaymentStatus.Success,
+	"data": {
+		"databaseId": 567,
+		"sum": 10000,
+		"from": 2,
+		"to": 4
+	}
+}
+const iResponceF: IResponceFailed = {
+	"status": PaymentStatus.Failed,
+	"data": {
+		"errorMessage": "Недостаточно средств",
+		"errorCode": 4
+	}
+}*/
